@@ -1,0 +1,258 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans';
+    
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    margin-left: 12px;
+    font-size: 12px;
+    color: var(--text);
+    font-weight: normal;
+    align-self: center;
+    padding-top: 5px;
+}
+
+:root {
+    --black: rgb(85,85,85);
+    --gray: rgb(52, 52, 52);
+    --hov-gray: rgb(118,118,118);
+    --border: rgba(177, 177, 177, 0.644);
+    --red: rgb(236,57,71);
+    --text: rgb(255,255,255);
+}
+
+#main-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 25px auto 1fr;
+    grid-template-areas: 
+    'header header'
+    'result history'
+    'buttons history';
+}
+
+#header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    grid-area: header;
+    flex-direction: row;
+}
+
+#header > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header > ul li {
+    width: 47px;
+    max-width: 8vw;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    padding-top: 3px;
+}
+
+#header > ul li:hover {
+    background-color: rgb(107, 107, 107);
+    cursor: default;
+}
+
+#header > ul li.spec:hover {
+    background-color: red;
+    cursor: default;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: buttons;
+    background-color: var(--black);
+    padding-left: 2px;
+    padding-bottom: 10px;
+    max-height: 67vh;
+}
+
+#history {
+    grid-area: history;
+    background-color: var(--black);
+    width: 22vw;
+    min-width: 240px;
+}
+
+#result {
+    grid-area: result;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#buttons > button {
+    width: 19.4%;
+    height: 19.9%;
+    color: var(--text);
+    border: none;
+    margin-top: 2px;
+    margin-left: 1px;
+    border-radius: 4px;
+}
+
+.res {
+    align-self: flex-end;
+    font-size:calc(35px + 1.5vh);
+    font-weight: 500;
+    color: var(--text);
+    box-sizing: content-box;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    margin-right: 1.5vw;
+}
+
+#btn {
+    align-self: flex-start;
+    display: flex;
+    width: 58vw;
+}
+
+#result > div:first-of-type {
+    display: flex;
+}
+
+.semi {
+    background-color: var(--gray);
+}
+
+.main {
+    background-color: rgb(17, 17, 17);
+}
+
+.on, .off, .menu {
+    background-color: var(--black);
+    border: none;
+}
+
+.semi:hover:nth-child(5n) {
+    background-color: var(--red) !important;
+    border: 1px solid var(--red) !important;
+}
+
+.bt:hover {
+    background-color: var(--hov-gray);
+    border: 1px solid var(--border) !important;
+    box-shadow: .5px .5px 15px 1px var(--hov-semi);
+}
+
+.icon {
+    max-width: 4vw;
+    max-height: 4vh;
+}
+
+.fnt {
+    font-size: calc(10px + .75vw);
+    font-weight: 400;
+}
+
+.icon2 {
+    width: 3vw;
+    max-width: 17px;
+}
+
+.fnt2 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#history > div {
+    display: flex;
+    padding-top: 20px;
+}
+
+.history {
+    margin-left: 20px;
+    border-bottom: 3px solid var(--red);
+    padding-bottom: 5px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.last {
+    padding-top: 40px;
+    margin-left: 5px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.memory {
+    color: var(--text);
+    margin-left: 25px;
+    font-weight: 400;
+}
+
+.semi-container > p {
+    padding-left: 11px;
+    color: var(--text);
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+}
+
+.menu {
+    width: 36px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.menu:hover {
+    background-color: var(--hov-gray);
+}
+
+#btn > button {
+    width: 19.68%;
+    max-width: 80px;
+    height: 7vh;
+}
+
+.on {
+    color: var(--text);
+}
+
+.on:hover {
+     border: 1px solid var(--border);
+     background-color: var(--hov-gray);
+}
+
+.off {
+    opacity: .3;
+    color: var(--text);
+}
+
+.bold {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.special {
+    width: 23%;
+    min-width: 35px;
+    max-width: 10vw;
+}
